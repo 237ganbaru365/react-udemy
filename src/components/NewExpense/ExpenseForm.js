@@ -51,6 +51,11 @@ const ExpenseForm = (props) => {
     setEnteredDate("");
   };
 
+  //useStateを使ってクリックイベントの実装
+  //初期値のクラス名を設定して最初はdisplay: none
+  //toggleを使う、条件分岐、preventXxxx = !preventXxxx　みたいなやつ
+  //ファイル新しく作成する
+
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
@@ -84,6 +89,9 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onCancele}>
+          Cancele
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
